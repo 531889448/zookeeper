@@ -1746,7 +1746,7 @@ public class DataTree {
 
     /**
      * Compares the actual tree's digest with that in the snapshot.
-     * Resets digestFromLoadedSnapshot after comparision.
+     * Resets digestFromLoadedSnapshot after comparison.
      *
      * @param zxid zxid
      */

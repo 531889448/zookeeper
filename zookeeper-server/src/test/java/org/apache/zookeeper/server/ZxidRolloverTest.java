@@ -193,7 +193,7 @@ public class ZxidRolloverTest extends ZKTestCase {
                 "Waiting for server down");
 
         // if idx is the the leader then everyone will get disconnected,
-        // otherwise if idx is a follower then just that client will get
+        // otherwise if idx is a follower than just that client will get
         // disconnected
         if (idx == idxLeader) {
             checkClientDisconnected(idx);

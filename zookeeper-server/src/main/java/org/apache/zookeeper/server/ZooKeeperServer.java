@@ -236,7 +236,7 @@ public class ZooKeeperServer implements SessionExpirer, ServerStats.Provider {
     private static volatile int maxBatchSize;
 
     /**
-     * Starting size of read and write ByteArroyOuputBuffers. Default is 32 bytes.
+     * Starting size of read and write ByteArroyOutputBuffers. Default is 32 bytes.
      * Flag not used for small transfers like connectResponses.
      */
     public static final String INT_BUFFER_STARTING_SIZE_BYTES = "zookeeper.intBufferStartingSizeBytes";
