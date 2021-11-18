@@ -80,7 +80,7 @@ public class NIOServerCnxnTest extends ClientBase {
 
             zk.create("/a", "test".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 
-            assertThat("Last client response size should be greater then zero after client request was performed", clientResponseStats.getLastBufferSize(), greaterThan(0));
+            assertThat("Last client response size should be greater than zero after client request was performed", clientResponseStats.getLastBufferSize(), greaterThan(0));
         }
     }
 

@@ -120,7 +120,7 @@ public class QuorumTest extends ZKTestCase {
         // Test view contains other servers
         assertTrue(qb.s1.viewContains(qb.s2.getId()));
 
-        // Test view does not contain non-existant servers
+        // Test view does not contain non-existent servers
         assertFalse(qb.s1.viewContains(-1L));
     }
 

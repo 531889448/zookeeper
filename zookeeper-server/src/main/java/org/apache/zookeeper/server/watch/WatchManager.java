@@ -120,7 +120,7 @@ public class WatchManager implements IWatchManager {
     }
 
     @Override
-    public WatcherOrBitSet triggerWatch(String path, EventType type, WatcherOrBitSet supress) {
+    public WatcherOrBitSet triggerWatch(String path, EventType type, WatcherOrBitSet suppress) {
         WatchedEvent e = new WatchedEvent(type, KeeperState.SyncConnected, path);
         Set<Watcher> watchers = new HashSet<>();
         PathParentIterator pathParentIterator = getPathParentIterator(path);
@@ -162,7 +162,7 @@ public class WatchManager implements IWatchManager {
         }
 
         for (Watcher w : watchers) {
-            if (supress != null && supress.contains(w)) {
+            if (suppress != null && suppress.contains(w)) {
                 continue;
             }
             w.process(e);

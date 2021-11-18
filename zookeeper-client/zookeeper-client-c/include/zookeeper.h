@@ -697,7 +697,7 @@ ZOOAPI sasl_callback_t *zoo_sasl_make_basic_callbacks(const char *user,
  * \return ZOK on success or one of the following errcodes on failure:
  * ZBADARGUMENTS - invalid input parameters
  * ZINVALIDSTATE - zhandle state is either ZOO_SESSION_EXPIRED_STATE or ZOO_AUTH_FAILED_STATE
- * ZSYSTEMERROR -- a system (OS) error occured; it's worth checking errno to get details
+ * ZSYSTEMERROR -- a system (OS) error occurred; it's worth checking errno to get details
  */
 ZOOAPI int zoo_set_servers(zhandle_t *zh, const char *hosts);
 
@@ -716,7 +716,7 @@ ZOOAPI int zoo_set_servers(zhandle_t *zh, const char *hosts);
  * This method allows an application to influence the rate of polling.
  * When delay_ms is set to a value greater than zero, the client skips
  * most "routine" resolutions which would have happened in a window of
- * that many milliseconds since the last succesful one.
+ * that many milliseconds since the last successful one.
  *
  * Setting delay_ms to 0 disables this logic, reverting to the default
  * behavior.  Setting it to -1 disables network resolutions during
@@ -1789,7 +1789,7 @@ typedef enum {
  * or ZOO_AUTH_FAILED_STATE
  * ZBADARGUMENTS - invalid input parameters
  * ZMARSHALLINGERROR - failed to marshall a request; possibly, out of memory
- * ZSYSTEMERROR - a system error occured
+ * ZSYSTEMERROR - a system error occurred
  */
 ZOOAPI int zoo_aremove_watches(zhandle_t *zh, const char *path,
         ZooWatcherType wtype, watcher_fn watcher, void *watcherCtx, int local,
@@ -1810,7 +1810,7 @@ ZOOAPI int zoo_aremove_watches(zhandle_t *zh, const char *path,
  * or ZOO_AUTH_FAILED_STATE
  * ZBADARGUMENTS - invalid input parameters
  * ZMARSHALLINGERROR - failed to marshall a request; possibly, out of memory
- * ZSYSTEMERROR - a system error occured
+ * ZSYSTEMERROR - a system error occurred
  */
 ZOOAPI int zoo_remove_all_watches(zhandle_t *zh, const char *path,
         ZooWatcherType wtype, int local);
@@ -1830,7 +1830,7 @@ ZOOAPI int zoo_remove_all_watches(zhandle_t *zh, const char *path,
  * or ZOO_AUTH_FAILED_STATE
  * ZBADARGUMENTS - invalid input parameters
  * ZMARSHALLINGERROR - failed to marshall a request; possibly, out of memory
- * ZSYSTEMERROR - a system error occured
+ * ZSYSTEMERROR - a system error occurred
 */
 ZOOAPI int zoo_aremove_all_watches(zhandle_t *zh, const char *path,
         ZooWatcherType wtype, int local, void_completion_t *completion,
@@ -2444,7 +2444,7 @@ ZOOAPI int zoo_multi(zhandle_t *zh, int count, const zoo_op_t *ops, zoo_op_resul
  * or ZOO_AUTH_FAILED_STATE
  * ZBADARGUMENTS - invalid input parameters
  * ZMARSHALLINGERROR - failed to marshall a request; possibly, out of memory
- * ZSYSTEMERROR - a system error occured
+ * ZSYSTEMERROR - a system error occurred
  */
 ZOOAPI int zoo_remove_watches(zhandle_t *zh, const char *path,
         ZooWatcherType wtype, watcher_fn watcher, void *watcherCtx, int local);

@@ -292,7 +292,7 @@ public class ZooKeeperTest extends ClientBase {
     }
 
     @Test
-    public void testNonexistantCommand() throws Exception {
+    public void testNonexistentCommand() throws Exception {
         testInvalidCommand("cret -s /node1", 127);
     }
 
@@ -397,7 +397,7 @@ public class ZooKeeperTest extends ClientBase {
     }
 
     @Test
-    public void testDeleteNonexistantNode() throws Exception {
+    public void testDeleteNonexistentNode() throws Exception {
         testInvalidCommand("delete /blahblahblah", 1);
     }
 
@@ -614,7 +614,7 @@ public class ZooKeeperTest extends ClientBase {
     }
 
     @Test
-    public void testLsrNonexistantZnodeCommand() throws Exception {
+    public void testLsrNonexistentZnodeCommand() throws Exception {
         final ZooKeeper zk = createClient();
         ZooKeeperMain zkMain = new ZooKeeperMain(zk);
 

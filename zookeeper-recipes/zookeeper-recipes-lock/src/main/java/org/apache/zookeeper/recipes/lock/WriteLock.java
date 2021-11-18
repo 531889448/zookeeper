@@ -57,7 +57,7 @@ public class WriteLock extends ProtocolSupport {
     private LockZooKeeperOperation zop;
 
     /**
-     * zookeeper contructor for writelock.
+     * zookeeper constructor for writelock.
      *
      * @param zookeeper zookeeper client instance
      * @param dir the parent path you want to use for locking
@@ -73,7 +73,7 @@ public class WriteLock extends ProtocolSupport {
     }
 
     /**
-     * zookeeper contructor for writelock with callback.
+     * zookeeper constructor for writelock with callback.
      *
      * @param zookeeper the zookeeper client instance
      * @param dir the parent path you want to use for locking
